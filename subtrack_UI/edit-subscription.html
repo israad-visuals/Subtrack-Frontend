@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SubTrack Delete Subscription</title>
+    <link rel="stylesheet" href="subtrack_styles.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="add-logo">
+    <h1>Subtrack</h1>
+    <h2>Take control of your subscriptions</h2>
+</div>
+
+<div class="login-card">
+    <h3>Delete Subscription</h3>
+    <form action="dashboard.html">
+        <label for="email">Service name:</label>
+        <input  type="text" id="email" placeholder="e.g: Netflix/Spotify" required>
+        <div id="Amount">
+            <label for="password">Amount: [CAD$] </label>
+            <input type="number" id="password" placeholder="0.00" required>
+        </div>
+        <label for="billing">Billing cycle:</label>
+        <select id="billing">
+            <option selected>Monthly</option>
+            <option>Yearly</option>
+            <option>Weekly</option>
+            <option>Quarterly</option>
+        </select>
+        <label for="category">Subscription Category:</label>
+        <select id="category" required>
+            <option>Entertainment</option>
+            <option>Productivity</option>
+            <option>Education</option>
+            <option>Health & Fitness</option>
+            <option>Shopping</option>
+            <option>Finance</option>
+            <option>Other</option>
+        </select>
+        <label for="start-date">Start Date:</labeL>
+        <input id="start-date" type="date">
+        <label for="free-trial">Is this a free trial?</label>
+        <input type="checkbox"  id="free-trial">
+        <br>
+        <div id="trial-date" hidden>
+            <label for="trial-ends">Free trial ends...</labeL>
+            <input id="trial-ends" type="date">
+        </div>
+
+
+        <div id="dateEnd">
+            <label for="end-date">End Date:</labeL>
+            <input id="end-date" type="date">
+        </div>
+
+        <script>
+            const trialCheckbox = document.getElementById("free-trial")
+            const trialEnds = document.getElementById("trial-date")
+            const amountBox = document.getElementById("Amount")
+            const endDateBox = document.getElementById("dateEnd")
+            trialCheckbox.onchange = ()=> {
+                trialEnds.hidden = !trialCheckbox.checked;
+                amountBox.hidden = trialCheckbox.checked;
+                endDateBox.hidden = trialCheckbox.checked;
+            };
+        </script>
+
+        <div class="primary-button">
+            <button type="submit">Add Subscription</button>
+        </div>
+        <div class="divider-line">
+            <hr>
+            <p>or have you changed your mind?</p>
+            <hr>
+        </div>
+        <div class="primary-button">
+            <button type="button" onclick="window.location.href='dashboard.html'">Cancel</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
