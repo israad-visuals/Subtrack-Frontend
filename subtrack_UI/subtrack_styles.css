@@ -141,7 +141,8 @@ label{
 }
 
 /** register **/
-#name{
+
+#first-name{
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     color: white;
@@ -154,6 +155,23 @@ label{
     padding: 12px;
     box-sizing: border-box;
 }
+
+#last-name{
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    width: 100%;
+    height: 44px;
+    background: #334155;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+
+
 
 #confirm-password{
     font-family: "Poppins", sans-serif;
