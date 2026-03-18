@@ -10,7 +10,7 @@ SubTrack helps users track recurring subscriptions and free trials, avoid forgot
 - HTML5
 - CSS3
 - JavaScript
-- React.js 
+- React.js
 
 ## Features
 - User Login and Registration
@@ -22,29 +22,30 @@ SubTrack helps users track recurring subscriptions and free trials, avoid forgot
 - Responsive design (desktop + mobile)
 
 ## Project Structure
-subtrack_UI/
-├── css/
-│   └── subtrack_styles.css
-├── js/
-│   ├── auth.js
-│   ├── dashboard.js
-│   └── subscriptions.js
-├── assets/
-├── login.html
-├── register.html
-├── dashboard.html
-├── add-subscription.html
-├── edit-subscription.html
-├── subscriptions.html
-├── analytics.html
-└── profile.html
+
+    subtrack_UI/
+    ├── css/
+    │   └── subtrack_styles.css
+    ├── js/
+    │   ├── auth.js
+    │   ├── dashboard.js
+    │   └── subscriptions.js
+    ├── assets/
+    ├── login.html
+    ├── register.html
+    ├── dashboard.html
+    ├── add-subscription.html
+    ├── edit-subscription.html
+    ├── subscriptions.html
+    ├── analytics.html
+    └── profile.html
 
 ## Backend API
 This frontend connects to the SubTrack Backend REST API:
 https://github.com/israad-visuals/Subtrack-Backend
 
 ## Team
-- **Ismail Abdi**  - Backend Lead & Technical Architect
+- **Ismail Abdi** - Backend Lead & Technical Architect
 - **Aanod Mohamed** - Frontend Lead & UI/UX Designer
 
 ## Course
