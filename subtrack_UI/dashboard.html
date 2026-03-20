@@ -12,20 +12,11 @@
 </head>
 
 <body class="dash-body">
-    <nav class="navbar">
-        <div class="nav-logo">
-            <h1>Subtrack  - Take control of your wallet</h1>
-        </div>
+    <div id="nav"> </div>
 
-        <div class="nav-links">
-            <a href="dashboard.html">Dashboard</a>
-            <a href="subscriptions.html">View All Subscriptions</a>
-            <a href="add-subscription.html">Add Subscriptions</a>
-            <a href="edit-subscription.html">Edit Subscriptions</a>
-            <a href="analytics.html">Analytics</a>
-            <a href="profile.html">Profile</a>
-        </div>
-    </nav>
+    <script>
+        fetch("navbar.html").then(r=>r.text()).then(html=>document.getElementById("nav").innerHTML=html);
+    </script>
 
         <div class="Dashboard">
             <div class="dash-welcome">

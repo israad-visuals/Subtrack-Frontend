@@ -1,11 +1,8 @@
 body{
-    height:100vh;
+    min-height:100vh;
     margin: 0;
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-top: 80px
 }
 
 .logo>h1{
@@ -36,8 +33,18 @@ body{
     max-width: 420px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
 
+
+
+
 }
 
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
 
 
 h3{
@@ -195,10 +202,12 @@ label{
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     background: #0F172A;
     border-bottom: 1px solid #1E293B;
+    padding: 0 30px;
+    box-sizing: border-box;
 }
 
 .nav-logo>h1{
