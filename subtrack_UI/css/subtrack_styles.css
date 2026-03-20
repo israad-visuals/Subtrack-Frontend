@@ -195,14 +195,17 @@ label{
     height: 80px;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    background: papayawhip;
+    justify-content: space-around;
+    flex-direction: row;
+    background: #0F172A;
+    border-bottom: 1px solid #1E293B;
 }
 
 .nav-logo>h1{
     font-family: "Poppins", sans-serif;
     font-size: 24px;
-    margin: 10px;
+    margin: 0;
+    font-weight: bold;
     color: #2563EB;
 }
 
@@ -220,8 +223,7 @@ label{
 
 .nav-links {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
