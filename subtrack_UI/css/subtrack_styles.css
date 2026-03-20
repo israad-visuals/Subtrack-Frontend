@@ -40,9 +40,11 @@ body{
 
 .wrapper{
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    padding-top: 5px;
+    padding-bottom: 40px;
 
 }
 
@@ -237,7 +239,7 @@ label{
 }
 
 .Dashboard{
-  margin-top: 110px;
+
 }
 .dash-welcome>h2{
     font-family: "Poppins", sans-serif;
@@ -378,7 +380,7 @@ label{
 
 .add-logo{
     text-align: center;
-    margin-top: 25px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 .add-logo>h1{
