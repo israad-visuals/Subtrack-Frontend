@@ -19,21 +19,21 @@
 <div class="login-card">
     <h3>Create Account</h3>
 
-    <div class="error-message">
-        Password must be at least 8 characters!
+    <div class="error-message" style="display: none;">
+        Confirm password field must match password!
     </div>
     <form action="login.html">
         <label for="first-name">First Name:</label>
-        <input  type="text" id="first-name" placeholder="John">
+        <input  type="text" id="first-name" placeholder="John" required>
         <label for="last-name">First Name:</label>
-        <input  type="text" id="last-name" placeholder="Doe">
+        <input  type="text" id="last-name" placeholder="Doe" required>
 
         <label for="email">Email: </label>
-        <input type="email" id="email" placeholder="you@example.com">
+        <input type="email" id="email" placeholder="you@example.com" required>
         <label for="password">Password:</label>
-        <input type="password"  id="password" placeholder="enter your password">
+        <input type="password"  id="password" placeholder="enter your password" required minlength="8">
         <label for="confirm-password">Confirm Password:</label>
-        <input type="password"  id="confirm-password" placeholder="enter the same password">
+        <input type="password"  id="confirm-password" placeholder="enter the same password" required minlength="8">
         <label>Currency: CAD*more currencies coming soon</label>
         <div class="primary-button">
             <button type="submit">Create Account</button>
@@ -48,6 +48,18 @@
         </div>
     </form>
 </div>
+<script>
+    const regForm = document.querySelector("form"); const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirm-password");
+    const error = document.querySelector(".error-message");
+    regForm.addEventListener("submit", function(e){
+        if(password.value!==confirmPassword.value){
+            e.preventDefault();
+            error.style.display = "block";
+        }
+    })
+
+</script>
 
 </body>
 </html>
