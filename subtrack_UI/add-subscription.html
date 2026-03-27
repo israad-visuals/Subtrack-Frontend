@@ -12,10 +12,18 @@
 </head>
 
 <body>
+<div id="nav"> </div>
+
+<script>
+    fetch("navbar.html").then(r=>r.text()).then(html=>document.getElementById("nav").innerHTML=html);
+</script>
+
+<div class="wrapper">
 <div class="add-logo">
     <h1>Subtrack</h1>
     <h2>Take control of your subscriptions</h2>
 </div>
+
 
 <div class="login-card">
     <h3>Add new Subscription</h3>
@@ -83,6 +91,7 @@
             <button type="button" onclick="window.location.href='dashboard.html'">Cancel</button>
         </div>
     </form>
+</div>
 </div>
 
 </body>
