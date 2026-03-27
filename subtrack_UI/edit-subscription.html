@@ -24,7 +24,7 @@
         <input  type="text" id="email" placeholder="[SELECTED SUB SERVICE NAME]" required>
         <div id="Amount">
             <label for="password">Amount: [CAD$] </label>
-            <input type="number" id="password" placeholder="0.00" required>
+            <input type="number" id="password" placeholder="0.00" >
         </div>
         <label for="billing">Billing cycle:</label>
         <select id="billing">
@@ -54,20 +54,15 @@
         </div>
 
 
-        <div id="dateEnd">
-            <label for="end-date">End Date:</labeL>
-            <input id="end-date" type="date">
-        </div>
+
 
         <script>
             const trialCheckbox = document.getElementById("free-trial")
             const trialEnds = document.getElementById("trial-date")
             const amountBox = document.getElementById("Amount")
-            const endDateBox = document.getElementById("dateEnd")
             trialCheckbox.onchange = ()=> {
                 trialEnds.hidden = !trialCheckbox.checked;
                 amountBox.hidden = trialCheckbox.checked;
-                endDateBox.hidden = trialCheckbox.checked;
             };
         </script>
 
