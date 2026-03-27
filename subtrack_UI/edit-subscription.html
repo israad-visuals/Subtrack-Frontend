@@ -12,6 +12,13 @@
 </head>
 
 <body>
+<div id="nav"> </div>
+
+<script>
+    fetch("navbar.html").then(r=>r.text()).then(html=>document.getElementById("nav").innerHTML=html);
+</script>
+
+<div class="wrapper">
 <div class="add-logo">
     <h1>Subtrack</h1>
     <h2>Take control of your subscriptions</h2>
@@ -84,6 +91,6 @@
         </div>
     </form>
 </div>
-
+</div>
 </body>
 </html>
