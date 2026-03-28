@@ -2,9 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>SubTrack Analytics</title>
+    <link rel="stylesheet" href="css/subtrack_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body class="dash-body">
+<div id="nav"></div>
+
+<script>
+    fetch("navbar.html").then(r=>r.text()).then(html=>document.getElementById("nav").innerHTML=html);
+</script>
+
+<div class="wrapper">
+    <div class="dash-welcome">
+        <h2>Spending Analytics</h2>
+    </div>
+
+    <div class="analytics-cards">
+        <div class="analytics-stat-card">
+            <h3>Monthly Burn Rate</h3>
+            <p class="burn-rate-total">$38.97</p>
+            <p class="analytics-subtext">this is what you spend every month on subscriptions</p>
+        </div>
+
+        <div class="analytics-stat-card">
+            <h3>Savings Summary</h3>
+            <p class="savings-text">
+                YOU saved $74.97 by canceling 3 subscriptions this year
+            </p>
+            <div class="green-light analytics-badge">GREAT JOB</div>
+        </div>
+    </div>
+
+    <div class="upcoming analytics-section">
+        <h2>Top Expenses</h2>
+        <table class="subscriptions">
+            <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Service</th>
+                <th>Monthly Cost</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Netflix</td>
+                <td>$16.99</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Spotify</td>
+                <td>$11.99</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Amazon</td>
+                <td>$9.99</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="upcoming analytics-section margin-top-30">
+        <h2>Spending by Category</h2>
+        <table class="subscriptions">
+            <thead>
+            <tr>
+                <th>Category</th>
+                <th>Sub Count</th>
+                <th>Total Cost</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Entertainment</td>
+                <td>4</td>
+                <td>$38.97</td>
+            </tr>
+            <tr>
+                <td>Productivity</td>
+                <td>0</td>
+                <td>$0.00</td>
+            </tr>
+            <tr>
+                <td>Shopping</td>
+                <td>0</td>
+                <td>$0.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 </body>
 </html>

@@ -430,25 +430,73 @@ label{
 
 
 
+/** ANALYTICS PAGE SPECIFIC CARDS **/
 
-/**
-.logo>h1{
+/* The row container */
+.analytics-cards {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+/* Page-specific card: Copied from .login-card but modified for the row */
+.analytics-stat-card {
+    background: #1e293b;            /* Same as login-card */
+    border: 1px solid #334155;      /* Same as login-card */
+    border-radius: 12px;            /* Same as login-card */
+    padding: 20px;                  /* Same as login-card */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3); /* Same as login-card */
+
+    flex: 1;                        /* Allows side-by-side growth */
+    width: 100%;                    /* Ensures it fills its flex space */
+    box-sizing: border-box;         /* Keeps padding inside the width */
+    text-align: center;             /* Centers the text */
+}
+
+/* Positioning for the table sections */
+.analytics-section {
+    width: 100%;
+    max-width: 800px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+/* Text styles for the analytics data */
+.burn-rate-total {
     font-family: "Poppins", sans-serif;
     font-size: 28px;
-    color: #3b82F6;
+    color: #3b82f6;
     font-weight: 800;
-
+    margin: 10px 0;
 }
 
-.logo>h2{
+.analytics-subtext {
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
     color: #94a3b8;
-    font-weight: 700;
+    font-size: 14px;
 }
 
-.logo{
-    text-align: center;
-    margin-bottom: 25px;
+.savings-text {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
-**/
+
+.analytics-badge {
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Mobile responsive stack */
+@media (max-width: 600px) {
+    .analytics-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
