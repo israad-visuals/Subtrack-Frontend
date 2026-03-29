@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SubTrack Edit Subscription</title>
-    <link rel="stylesheet" href="css/subtrack_styles.css">
+    <title>SubTrack Add Subscription</title>
+    <link rel="stylesheet" href="../css/subtrack_styles.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,12 @@
     <h2>Take control of your subscriptions</h2>
 </div>
 
+
 <div class="login-card">
-    <h3>Edit Subscription</h3>
+    <h3>Add new Subscription</h3>
     <form action="dashboard.html">
         <label for="email">Service name:</label>
-        <input  type="text" id="email" placeholder="[SELECTED SUB SERVICE NAME]" required>
+        <input  type="text" id="email" placeholder="e.g: Netflix/Spotify" required>
         <div id="Amount">
             <label for="password">Amount: [CAD$] </label>
             <input type="number" id="password" placeholder="0.00" required>
@@ -51,13 +52,13 @@
             <option>Other</option>
         </select>
         <label for="start-date">Start Date:</labeL>
-        <input id="start-date" type="date" required>
+        <input id="start-date" type="date" required >
         <label for="free-trial">Is this a free trial?</label>
         <input type="checkbox"  id="free-trial">
         <br>
         <div id="trial-date" hidden>
             <label for="trial-ends">Free trial ends...</labeL>
-            <input id="trial-ends" type="date" required>
+            <input id="trial-ends" type="date" >
         </div>
 
 
@@ -79,18 +80,19 @@
         </script>
 
         <div class="primary-button">
-            <button type="submit">Save Changes</button>
+            <button type="submit">Add Subscription</button>
         </div>
         <div class="divider-line">
             <hr>
-            <p>or </p>
+            <p>or have you changed your mind?</p>
             <hr>
         </div>
         <div class="primary-button">
-            <button type="button" onclick="window.location.href='dashboard.html'">Cancel Subscription</button>
+            <button type="button" onclick="window.location.href='dashboard.html'">Cancel</button>
         </div>
     </form>
 </div>
 </div>
+
 </body>
 </html>
