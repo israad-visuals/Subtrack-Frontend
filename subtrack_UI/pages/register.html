@@ -28,7 +28,7 @@
     <form id="registerForm">
         <label for="first-name">First Name:</label>
         <input  type="text" id="first-name" placeholder="John" required>
-        <label for="last-name">First Name:</label>
+        <label for="last-name">Last Name:</label>
         <input  type="text" id="last-name" placeholder="Doe" required>
 
         <label for="email">Email: </label>
@@ -51,18 +51,7 @@
         </div>
     </form>
 </div>
-<script>
-    const regForm = document.querySelector("form"); const password = document.getElementById("password");
-    const confirmPassword = document.getElementById("confirm-password");
-    const error = document.querySelector(".error-message");
-    regForm.addEventListener("submit", function(e){
-        if(password.value!==confirmPassword.value){
-            e.preventDefault();
-            error.style.display = "block";
-        }
-    })
 
-</script>
 
 </div>
 <script src="../js/auth.js"></script>
