@@ -428,27 +428,117 @@ label{
     margin-bottom: 10px;
 }
 
+/** view subscriptions **/
+.subscriptions-page {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.subscription-subtitle {
+    text-align: center;
+    color: #94A3B8;
+}
+
+.subscriptions-controls {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#subscriptions-search {
+    flex: 1;
+    min-width: 200px;
+    height: 44px;
+    border-radius: 20px;
+    border: none;
+}
+
+.subscriptions-summary {
+    margin-top: 15px;
+    text-align: center;
+    color: #94A3B8;
+}
+
+#category-box{
+    border-radius: 15px;
+    border: none;
+}
+
+#filter-box{
+    border-radius: 15px;
+    border: none;
+}
+
+#add-button{
+    border-radius: 15px;
+    border: none;
+}
+
+/** analytics page **/
+
+.analytics-cards {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
 
 
+.analytics-stat-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
 
-/**
-.logo>h1{
+
+.analytics-section {
+    width: 100%;
+    max-width: 800px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+
+.burn-rate-total {
     font-family: "Poppins", sans-serif;
     font-size: 28px;
-    color: #3b82F6;
+    color: #3b82f6;
     font-weight: 800;
-
+    margin: 10px 0;
 }
 
-.logo>h2{
+.analytics-subtitle {
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
     color: #94a3b8;
-    font-weight: 700;
+    font-size: 14px;
 }
 
-.logo{
-    text-align: center;
-    margin-bottom: 25px;
+.savings-text {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
-**/
+
+.analytics-badge {
+    padding: 8px;
+    font-size: 14px;
+}
+
+
+
+
+
