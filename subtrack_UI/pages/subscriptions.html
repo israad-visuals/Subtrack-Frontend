@@ -2,9 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>View Subscriptions</title>
+    <link rel="stylesheet" href="css/subtrack_styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+
+<body class="dash-body">
+
+<div id="nav"></div>
+
+<script>
+    fetch("navbar.html")
+        .then(r => r.text())
+        .then(html => document.getElementById("nav").innerHTML = html);
+</script>
+
+<div class="subscriptions-page">
+    <div class="dash-welcome">
+        <h2>My Subscriptions</h2>
+        <p class="subscription-subtitle">
+            View and Edit all your subscriptions
+        </p>
+    </div>
+    <div class="subscriptions-controls">
+        <input type="text" placeholder="Search subscriptions..." id="subscriptions-search">
+        <select id="category-box">
+            <option>All Categories</option>
+            <option>Entertainment</option>
+            <option>Productivity</option>
+            <option>Education</option>
+            <option>Health & Fitness</option>
+            <option>Shopping</option>
+            <option>Finance</option>
+            <option>Other</option>
+        </select>
+
+        <select id="filter-box">
+            <option>Sort by: Next Billing</option>
+            <option>Cost (High to Low)</option>
+            <option>Cost (Low to High)</option>
+            <option>Name (A-Z)</option>
+        </select>
+        <button onclick="location.href='add-subscription.html'" id="add-button">
+            + Add New
+        </button>
+        <div class="activeGroup">
+            <label for="active" id="activeLabel">active</label>
+            <input type="checkbox"  id="active">
+        </div>
+
+    </div>
+    <div class="upcoming">
+        <table class="subscriptions">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Category</th>
+                <th>Cost</th>
+                <th>Next Billing</th>
+                <th>Status</th>
+                <th>Edit</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Netflix</td>
+                <td>Entertainment</td>
+                <td>$16.99</td>
+                <td>Feb 19, 2026</td>
+                <td class="red-light">Due Soon</td>
+                <td><button onclick="location.href='edit-subscription.html'">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Spotify</td>
+                <td>Entertainment</td>
+                <td>$11.99</td>
+                <td>Feb 22, 2026</td>
+                <td class="yellow-light">Upcoming</td>
+                <td><button onclick="location.href='edit-subscription.html'">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Amazon Prime</td>
+                <td>Shopping</td>
+                <td>$9.99</td>
+                <td>Mar 5, 2026</td>
+                <td class="green-light">Safe</td>
+                <td><button onclick="location.href='edit-subscription.html'">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Disney+ (Trial)</td>
+                <td>Entertainment</td>
+                <td>$0.00</td>
+                <td>Feb 24, 2026</td>
+                <td class="blue-light">Free Trial</td>
+                <td><button onclick="location.href='edit-subscription.html'">Edit</button></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <p class="subscriptions-summary">
+        Showing 4 subscriptions • Total: $38.97/month
+    </p>
+</div>
+
+<script>
+    const activityToggle = document.getElementById("active")
+    const activityLabel = document.getElementById("activeLabel")
+    activityToggle.onchange=()=> {
+        if(activityToggle.checked){
+            activityLabel.textContent = "discontinued";
+        }else{
+            activityLabel.textContent = "active";
+        }
+
+    }
+</script>
 
 </body>
 </html>
