@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>View Subscriptions</title>
-    <link rel="stylesheet" href="css/subtrack_styles.css">
+    <link rel="stylesheet" href="../css/subtrack_styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,65 +62,20 @@
                 <th>Service</th>
                 <th>Category</th>
                 <th>Cost</th>
-                <th>Next Billing</th>
+                <th>Billing cycle</th>
                 <th>Status</th>
                 <th>Edit</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>Netflix</td>
-                <td>Entertainment</td>
-                <td>$16.99</td>
-                <td>Feb 19, 2026</td>
-                <td class="red-light">Due Soon</td>
-                <td><button onclick="location.href='edit-subscription.html'">Edit</button></td>
-            </tr>
-            <tr>
-                <td>Spotify</td>
-                <td>Entertainment</td>
-                <td>$11.99</td>
-                <td>Feb 22, 2026</td>
-                <td class="yellow-light">Upcoming</td>
-                <td><button onclick="location.href='edit-subscription.html'">Edit</button></td>
-            </tr>
-            <tr>
-                <td>Amazon Prime</td>
-                <td>Shopping</td>
-                <td>$9.99</td>
-                <td>Mar 5, 2026</td>
-                <td class="green-light">Safe</td>
-                <td><button onclick="location.href='edit-subscription.html'">Edit</button></td>
-            </tr>
-            <tr>
-                <td>Disney+ (Trial)</td>
-                <td>Entertainment</td>
-                <td>$0.00</td>
-                <td>Feb 24, 2026</td>
-                <td class="blue-light">Free Trial</td>
-                <td><button onclick="location.href='edit-subscription.html'">Edit</button></td>
-            </tr>
+            <tbody id="subListTable">
             </tbody>
         </table>
 
     </div>
     <p class="subscriptions-summary">
-        Showing 4 subscriptions • Total: $38.97/month
     </p>
 </div>
 
-<script>
-    const activityToggle = document.getElementById("active")
-    const activityLabel = document.getElementById("activeLabel")
-    activityToggle.onchange=()=> {
-        if(activityToggle.checked){
-            activityLabel.textContent = "discontinued";
-        }else{
-            activityLabel.textContent = "active";
-        }
-
-    }
-</script>
-
+<script src="../js/subscriptions.js"></script>
 </body>
 </html>

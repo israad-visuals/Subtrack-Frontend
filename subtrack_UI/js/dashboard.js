@@ -45,3 +45,5 @@ fetch(API_BASE + "/api/subscriptions/" + userId, {
             table.appendChild(row);
         });
     });
+
+// status will become billing date
