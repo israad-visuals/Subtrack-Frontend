@@ -24,14 +24,14 @@
     <div class="analytics-cards">
         <div class="analytics-stat-card">
             <h3>Monthly Burn Rate</h3>
-            <p class="burn-rate-total">$38.97</p>
+            <p class="burn-rate-total" id="burnRate">$0.00</p>
             <p class="analytics-subtitle">this is what you spend every month on subscriptions</p>
         </div>
 
         <div class="analytics-stat-card">
             <h3>Savings Summary</h3>
-            <p class="savings-text">
-                YOU saved $74.97 by canceling 3 subscriptions this year
+            <p class="savings-text" id="savingsText">
+                loading...
             </p>
             <div class="green-light analytics-badge">GREAT JOB</div>
         </div>
@@ -47,22 +47,7 @@
                 <th>Monthly Cost</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td>Netflix</td>
-                <td>$16.99</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Spotify</td>
-                <td>$11.99</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Amazon</td>
-                <td>$9.99</td>
-            </tr>
+            <tbody id="topExpensesTable">
             </tbody>
         </table>
     </div>
@@ -77,25 +62,11 @@
                 <th>Total Cost</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>Entertainment</td>
-                <td>4</td>
-                <td>$38.97</td>
-            </tr>
-            <tr>
-                <td>Productivity</td>
-                <td>0</td>
-                <td>$0.00</td>
-            </tr>
-            <tr>
-                <td>Shopping</td>
-                <td>0</td>
-                <td>$0.00</td>
-            </tr>
+            <tbody id="subByCategoryTable">
             </tbody>
         </table>
     </div>
 </div>
+<script src="../js/analytics.js"></script>
 </body>
 </html>
