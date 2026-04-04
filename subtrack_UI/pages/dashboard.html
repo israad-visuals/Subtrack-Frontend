@@ -23,25 +23,25 @@
             <div class="stat-cards">
                 <div class="stat-card">
                     <h4>Monthly Burn Rate</h4>
-                    <p>$127.94</p>
-                    <p>+ $12 from last month</p>
+                    <p id="burnRate">Loading...</p>
+                   <!-- <p>+ $12 from last month</p> -->
                 </div>
 
                 <div class="stat-card">
                     <h4>Active Subscriptions</h4>
-                    <p>8</p>
-                    <p>3 free trials</p>
+                    <p id="activeCount">loading...</p>
+                    <p id="trialCount">loading...</p>
                 </div>
 
                 <div class="stat-card">
                     <h4>This Week</h4>
-                    <p>3</p>
+                    <p id="dueThisWeek">loading...</p>
                     <p>Payments due</p>
                 </div>
 
                 <div class="stat-card">
                     <h4>Saved This Month</h4>
-                    <p>$24.99</p>
+                    <p id="savedAmount">loading...</p>
                     <p>From cancelled subscriptions</p>
                 </div>
             </div>
@@ -54,43 +54,17 @@
                     <th>Service</th>
                     <th>Cost</th>
                     <th>Cycle</th>
-                    <th>Next Billing</th>
+                    <th>Category</th>
                     <th>Status</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>Netflix</td>
-                    <td>$16.99</td>
-                    <td>Monthly</td>
-                    <td>Feb 19, 2026</td>
-                    <td class="red-light">Due Soon</td>
-                </tr>
-                <tr>
-                    <td>Spotify</td>
-                    <td>$11.99</td>
-                    <td>Monthly</td>
-                    <td>Feb 22, 2026</td>
-                    <td class="yellow-light">Upcoming</td>
-                </tr>
-                <tr>
-                    <td>Amazon Prime</td>
-                    <td>$9.99</td>
-                    <td>Monthly</td>
-                    <td>Mar 5, 2026</td>
-                    <td class="green-light">Safe</td>
-                </tr>
-                <tr>
-                    <td>Disney+ (Trial)</td>
-                    <td>$0.00</td>
-                    <td>Trial</td>
-                    <td>Feb 24, 2026</td>
-                    <td class="blue-light">Free Trial</td>
-                </tr>
+                <tbody id="subscriptionsTable">
+                <!-- data here -->
                 </tbody>
             </table>
         </div>
 
     </div>
+<script src="../js/dashboard.js"></script>
 </body>
 </html>
