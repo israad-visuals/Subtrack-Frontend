@@ -61,24 +61,6 @@
             <input id="trial-ends" type="date" >
         </div>
 
-
-
-
-        <script>
-            const trialCheckbox = document.getElementById("free-trial")
-            const trialEnds = document.getElementById("trial-date")
-            const amountBox = document.getElementById("Amount")
-            const amountReq = document.getElementById("password")
-            const trialReq = document.getElementById("trial-ends")
-
-            amountReq.required = !trialCheckbox.checked;
-            trialReq.required = trialCheckbox.checked;
-            trialCheckbox.onchange = ()=> {
-                trialEnds.hidden = !trialCheckbox.checked;
-                amountBox.hidden = trialCheckbox.checked;
-            };
-        </script>
-
         <div class="primary-button">
             <button type="submit">Add Subscription</button>
         </div>
@@ -94,5 +76,6 @@
 </div>
 </div>
 
+<script src="../js/add.js"></script>
 </body>
 </html>

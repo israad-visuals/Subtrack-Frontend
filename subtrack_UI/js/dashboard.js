@@ -46,4 +46,4 @@ fetch(API_BASE + "/api/subscriptions/" + userId, {
         });
     });
 
-// status will become billing date
+// status will become billing date, which should be start date + whatever cycle
