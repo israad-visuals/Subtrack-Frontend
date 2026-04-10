@@ -52,7 +52,7 @@ addSubForm.addEventListener("submit", async (e) => {
         }
     }
 
-    const payload = {
+    const newSub = {
         serviceName,
         cost,
         billingCycle,
@@ -70,19 +70,16 @@ addSubForm.addEventListener("submit", async (e) => {
                 "Content-Type": "application/json",
                 "Authorization": "Bearer " + token
             },
-            body: JSON.stringify(payload)
+            body: JSON.stringify(newSub)
         });
-
         if (!response.ok) {
             const errorData = await response.json();
             console.error(errorData);
             alert("Error adding subscription: " + (errorData.error || JSON.stringify(errorData)));
             return;
         }
-
         alert("Subscription added successfully!");
         window.location.href = "dashboard.html";
-
     } catch (error) {
         console.error("Error:", error);
         alert("An unexpected error occurred. Check console for details.");

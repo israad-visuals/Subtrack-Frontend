@@ -33,17 +33,26 @@ fetch(API_BASE + "/api/subscriptions/" + userId, {
         console.log(data);
         table.innerHTML = "";
 
-        data.forEach(sub => {
+        const todaysMonth = new Date().getMonth();
+        const thisYear =  new Date().getFullYear();
+
+        data
+            .filter(sub => {
+                const billingDate = new Date(sub.nextBillingDate);
+                return (
+                    billingDate.getMonth() === todaysMonth && billingDate.getFullYear() === thisYear
+                );
+            })
+            .forEach(sub => {
             const row = document.createElement("tr");
             row.innerHTML = `
             <td>${sub.serviceName}</td>
             <td>$${sub.cost}</td>
             <td>${sub.billingCycle}</td>
             <td>${sub.category}</td>
-            <td>${sub.status}</td>
+            <td>${sub.nextBillingDate}</td>
         `;
             table.appendChild(row);
         });
     });
 
-// status will become billing date, which should be start date + whatever cycle
