@@ -79,7 +79,7 @@ addSubForm.addEventListener("submit", async (e) => {
             return;
         }
         alert("Subscription added successfully!");
-        window.location.href = "dashboard.html";
+        window.location.href = "../pages/subscriptions.html";
     } catch (error) {
         console.error("Error:", error);
         alert("An unexpected error occurred. Check console for details.");
